@@ -1,0 +1,79 @@
+:root{
+	/* --primario: #672DB5; */
+	--primario: #fff;
+	--secundario: #ec9e28;
+
+}
+
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+body{
+	font-size: 16px;
+}
+
+/** Globales **/
+h1{
+	font-size: 3.8rem;
+}
+h2{
+	font-size: 2.8rem;
+}
+h3{
+	font-size: 1.8rem;
+}
+/** Utilidades **/
+.contenedor{
+	width: 120rem;
+	margin: 0;
+}
+.no-margin{
+	margin: 0;
+}
+/** Header **/
+@media (min-width: 768px){
+	.barra{
+		display: flex;
+		justify-content: space-between;
+        align-items: center;
+	}	
+}
+
+.header-principal{
+	background-image: url(../img/img1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 55rem;
+	background-position: center center;
+	padding: 1rem;
+}
+.logo-header{
+	text-decoration: none;
+	color: var(--primario);
+	font-weight: bold;
+}
+.navegacion-principal{
+	display: flex;
+	flex-direction: column;
+}
+@media (min-width: 768px){
+	.navegacion-principal{
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+.navegacion-principal a{
+	display: block;
+	color: var(--secundario);
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-right: 2rem;
+	/* padding: 2rem; */
+}
