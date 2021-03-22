@@ -2,7 +2,9 @@
 	/* --primario: #672DB5; */
 	--primario: #fff;
 	--secundario: #ec9e28;
-
+	--fondo: #36128a;
+	--blanco: #fff;
+	--formulario: rgb(231, 122, 33);
 }
 
 
@@ -16,6 +18,7 @@ html{
 
 body{
 	font-size: 16px;
+	background-color: var(--fondo);
 }
 
 /** Globales **/
@@ -28,10 +31,14 @@ h2{
 h3{
 	font-size: 1.8rem;
 }
+h1,h2,h3,p{
+	text-align: center;
+	color: var(--blanco);
+}
 /** Utilidades **/
 .contenedor{
 	width: 120rem;
-	margin: 0;
+	margin: 0 auto;
 }
 .no-margin{
 	margin: 0;
@@ -58,18 +65,17 @@ h3{
 	color: var(--primario);
 	font-weight: bold;
 }
-.navegacion-principal{
-	display: flex;
-	flex-direction: column;
+.barra{
+
 }
 @media (min-width: 768px){
-	.navegacion-principal{
+	.barra{
+		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-between;
 	}
 }
 .navegacion-principal a{
-	display: block;
 	color: var(--secundario);
 	text-decoration: none;
 	font-size: 2rem;
@@ -77,9 +83,54 @@ h3{
 	margin-right: 2rem;
 	/* padding: 2rem; */
 }
+.titulo-header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 25rem;
+}
+.header-principal_titulo{
+	color: var(--secundario);
+	text-align: center;
+	align-content: flex-end;
+}
+
 
 /* Contenido */
-.contenido-principal{
+@media (min-width: 768px){
+	.contenido-principal{
+		display: flex;
+		gap: 2rem;
+	}	
+}
+
+.barra-lateral{
+	margin: 1rem;
+}
+
+/* Trabajando */
+.trabajando{
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/* Formulario */
+.formulario{
+	background-color: var(--formulario);
+	padding: .5rem;
+	margin: 0 auto;
+}
+.formulario fieldset{
+	border: none;
+  }
+.formulario legend{
+	text-align: center;
+	font-weight: bold;
+	color: var(--primario);
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	text-transform: capitalize;
 }
